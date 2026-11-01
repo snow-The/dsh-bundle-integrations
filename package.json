@@ -1,0 +1,28 @@
+{
+  "name": "@snow-the/dsh-bundle-integrations",
+  "version": "0.1.0",
+  "private": true,
+  "description": "外部整合：LLM 迴圈、外部網路發佈",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "level": "optional",
+    "compatibility": {
+      "dshReleases": [
+        "0.2.1-rc.5"
+      ],
+      "verifiedAgainst": "0.2.1-rc.5"
+    }
+  }
+}

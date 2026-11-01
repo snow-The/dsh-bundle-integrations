@@ -1,0 +1,13 @@
+# @snow-the/dsh-bundle-integrations — 外部整合：LLM 迴圈、外部網路發佈
+#
+# 聚合包：只插入成員的 row，不搬移任何程式碼。成員仍是獨立套件，可單獨安裝。
+# 三條規則（實測自官方 dsh-base）：後寫的 patch 以 id 覆蓋前面的；patch 取代整個
+# config 而非合併；row 順序沒有載入語意。
+#
+# 因此 profile 的 dsh.profile.bundles 只能列這個聚合包，不能同時列成員
+# （同一個 id 被兩層宣告時，後者會靜默勝出）。
+- insert:
+    - id: dsh-busyloop
+      name: '@snow-the/dsh-busyloop'
+    - id: eigenflux
+      name: '@snow-the/dsh-eigenflux'
